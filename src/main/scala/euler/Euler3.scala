@@ -37,11 +37,11 @@ object Euler3 {
     case x :: xs => foldLeft(xs)(f(z,x))(f)
   }
 
-  List(1,2,3)(None)
-  List(2,3) Some(1)
-  List(3) Some(2)
-  Nil Some(3)
-  Some(3)
+//  List(1,2,3)(None)
+//  List(2,3) Some(1)
+//  List(3) Some(2)
+//  Nil Some(3)
+//  Some(3)
 
   def primeFactors(n: Long): List[Long] = LazyList.from(2).takeWhile(i => i*i <= n).find(d => n%d == 0) match {
     case None => List(n)

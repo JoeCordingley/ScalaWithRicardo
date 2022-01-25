@@ -4,7 +4,14 @@ object Euler2 {
 
 
   val primes: LazyList[Int] = 2 #:: LazyList.from(3)
-    .filter( i => primes.takeWhile(p => p*p <= i).forall(p => p%i != 0))
+    .filter(isPrime)
+
+  def isPrime: Int => Boolean = i => primes.takeWhile(p => p*p <= i).forall(p => p%i != 0)
+
+  def and(x: Boolean, y: => Boolean): Boolean = x match {
+    case true => y
+    case false => false
+  }
 
   def main(args: Array[String]): Unit = {
 
