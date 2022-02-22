@@ -1281,3 +1281,1278 @@ scala.meta.internal.mtags.IndexingExceptions$InvalidSymbolException: used by: io
 
 2022.02.22 14:53:14 INFO  Closing debug server tcp://0.0.0.0:43651
 2022.02.22 14:53:14 INFO  Canceling debug proxy for [robot.RobotAlpha]
+2022.02.22 15:11:52 INFO  compiling root (1 scala source)
+2022.02.22 15:11:52 INFO  Deduplicating compilation of root from bsp client 'Metals 0.11.1' (since 19m 40.753s)
+2022.02.22 15:11:52 INFO  compiling root (1 scala source)
+2022.02.22 15:11:52 WARN  1 deprecation (since 0.23.5); re-run with -deprecation for details
+2022.02.22 15:11:52 WARN  1 deprecation (since 0.23.5); re-run with -deprecation for details
+2022.02.22 15:11:52 INFO  time: compiled root in 0.95s
+2022.02.22 15:11:53 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/ricardo/IdeaProjects/ScalaWithRicardo/.metals/dap-server.trace.json or /home/ricardo/.cache/metals/dap-server.trace.json
+2022.02.22 15:11:53 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/ricardo/IdeaProjects/ScalaWithRicardo/.metals/dap-client.trace.json or /home/ricardo/.cache/metals/dap-client.trace.json
+2022.02.22 15:11:53 INFO  Starting debug proxy for [robot.RobotAlpha]
+2022.02.22 15:11:54 INFO  Trying to attach to remote debuggee VM localhost:53491 .
+2022.02.22 15:11:54 INFO  Attaching to debuggee VM succeeded.
+2022.02.22 15:11:54 ERROR SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2022.02.22 15:11:54 ERROR SLF4J: Defaulting to no-operation (NOP) logger implementation
+2022.02.22 15:11:54 ERROR SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2022.02.22 15:11:55 ERROR searching for `#` failed
+scala.meta.internal.mtags.IndexingExceptions$InvalidSymbolException: #
+	at scala.meta.internal.mtags.OnDemandSymbolIndex.definitions(OnDemandSymbolIndex.scala:57)
+	at scala.meta.internal.metals.DestinationProvider.definition(DefinitionProvider.scala:313)
+	at scala.meta.internal.metals.DestinationProvider.fromSymbol(DefinitionProvider.scala:351)
+	at scala.meta.internal.metals.DestinationProvider.fromSymbol(DefinitionProvider.scala:371)
+	at scala.meta.internal.metals.DefinitionProvider.fromSymbol(DefinitionProvider.scala:104)
+	at scala.meta.internal.metals.StacktraceAnalyzer.findLocationForSymbol$1(StacktraceAnalyzer.scala:68)
+	at scala.meta.internal.metals.StacktraceAnalyzer.$anonfun$fileLocationFromLine$2(StacktraceAnalyzer.scala:73)
+	at scala.PartialFunction$Unlifted.applyOrElse(PartialFunction.scala:237)
+	at scala.collection.TraversableOnce.collectFirst(TraversableOnce.scala:180)
+	at scala.collection.TraversableOnce.collectFirst$(TraversableOnce.scala:167)
+	at scala.collection.AbstractTraversable.collectFirst(Traversable.scala:108)
+	at scala.meta.internal.metals.StacktraceAnalyzer.$anonfun$fileLocationFromLine$1(StacktraceAnalyzer.scala:73)
+	at scala.Option.flatMap(Option.scala:271)
+	at scala.meta.internal.metals.StacktraceAnalyzer.fileLocationFromLine(StacktraceAnalyzer.scala:71)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$handleServerMessage$1(DebugProxy.scala:183)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$handleServerMessage$1$adapted(DebugProxy.scala:160)
+	at scala.meta.internal.metals.debug.ServerAdapter.$anonfun$onReceived$1(ServerAdapter.scala:25)
+	at scala.meta.internal.metals.debug.MessageIdAdapter.$anonfun$listen$1(MessageIdAdapter.scala:57)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at scala.meta.internal.metals.debug.SocketEndpoint.listen(SocketEndpoint.scala:26)
+	at scala.meta.internal.metals.debug.MessageIdAdapter.listen(MessageIdAdapter.scala:47)
+	at scala.meta.internal.metals.debug.ServerAdapter.onReceived(ServerAdapter.scala:18)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$listenToServer$1(DebugProxy.scala:67)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2022.02.22 15:11:57 INFO  Canceling debug proxy for [robot.RobotAlpha]
+2022.02.22 15:11:57 INFO  Closing debug server tcp://0.0.0.0:45507
+2022.02.22 15:18:53 INFO  compiling root (1 scala source)
+2022.02.22 15:18:53 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:18:53 INFO  Deduplicating compilation of root from bsp client 'Metals 0.11.1' (since 26m 41.728s)
+2022.02.22 15:18:53 INFO  compiling root (1 scala source)
+2022.02.22 15:18:53 INFO  time: compiled root in 0.46s
+2022.02.22 15:18:53 INFO  compiling root (1 scala source)
+2022.02.22 15:18:54 INFO  time: compiled root in 0.48s
+fev. 22, 2022 3:18:54 DA TARDE org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Compilation not successful
+java.util.concurrent.CompletionException: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Compilation not successful
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:332)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:347)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:708)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2162)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:29)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:26)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at scala.concurrent.BatchingExecutor$Batch.processBatch$1(BatchingExecutor.scala:67)
+	at scala.concurrent.BatchingExecutor$Batch.$anonfun$run$1(BatchingExecutor.scala:82)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:85)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:59)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:875)
+	at scala.concurrent.BatchingExecutor.execute(BatchingExecutor.scala:110)
+	at scala.concurrent.BatchingExecutor.execute$(BatchingExecutor.scala:107)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:873)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:72)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1$adapted(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:288)
+	at scala.concurrent.Promise.complete(Promise.scala:53)
+	at scala.concurrent.Promise.complete$(Promise.scala:52)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:187)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Compilation not successful
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.$anonfun$applyOrElse$4(BuildServerConnection.scala:282)
+	at scala.Option.getOrElse(Option.scala:189)
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.applyOrElse(BuildServerConnection.scala:280)
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.applyOrElse(BuildServerConnection.scala:268)
+	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:417)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	... 4 more
+
+fev. 22, 2022 3:19:04 DA TARDE org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$: Cannot run class, since the workspace has errors.
+java.util.concurrent.CompletionException: scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$: Cannot run class, since the workspace has errors.
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:332)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptNow(CompletableFuture.java:747)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:735)
+	at java.base/java.util.concurrent.CompletableFuture.thenAcceptAsync(CompletableFuture.java:2186)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.thenAccept(FutureConvertersImpl.scala:37)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:279)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$: Cannot run class, since the workspace has errors.
+	at scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$.<clinit>(DebugProvider.scala)
+	at scala.meta.internal.metals.debug.DebugProvider.debugDiscovery(DebugProvider.scala:363)
+	at scala.meta.internal.metals.MetalsLanguageServer.executeCommand(MetalsLanguageServer.scala:1777)
+	at jdk.internal.reflect.GeneratedMethodAccessor12.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	... 9 more
+
+2022.02.22 15:19:15 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:19:16 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:19:17 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:19:20 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:19:20 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:19:21 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:19:22 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:19:57 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:19:58 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:20:04 INFO  compiling root (1 scala source)
+fev. 22, 2022 3:20:04 DA TARDE org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$: Cannot run class, since the workspace has errors.
+java.util.concurrent.CompletionException: scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$: Cannot run class, since the workspace has errors.
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:332)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptNow(CompletableFuture.java:747)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:735)
+	at java.base/java.util.concurrent.CompletableFuture.thenAcceptAsync(CompletableFuture.java:2186)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.thenAccept(FutureConvertersImpl.scala:37)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:279)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$: Cannot run class, since the workspace has errors.
+	at scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$.<clinit>(DebugProvider.scala)
+	at scala.meta.internal.metals.debug.DebugProvider.debugDiscovery(DebugProvider.scala:363)
+	at scala.meta.internal.metals.MetalsLanguageServer.executeCommand(MetalsLanguageServer.scala:1777)
+	at jdk.internal.reflect.GeneratedMethodAccessor12.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	... 9 more
+
+2022.02.22 15:20:04 INFO  time: compiled root in 0.54s
+2022.02.22 15:20:19 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:20:19 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:20:20 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:20:21 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:20:25 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:20:27 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:20:28 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:20:28 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:20:30 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:20:31 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:20:32 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:20:32 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:20:33 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:20:33 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:20:34 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:20:34 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:20:36 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:20:36 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:20:37 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:20:38 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:20:44 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:20:47 INFO  compiling root (1 scala source)
+fev. 22, 2022 3:20:47 DA TARDE org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$: Cannot run class, since the workspace has errors.
+java.util.concurrent.CompletionException: scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$: Cannot run class, since the workspace has errors.
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:332)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptNow(CompletableFuture.java:747)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:735)
+	at java.base/java.util.concurrent.CompletableFuture.thenAcceptAsync(CompletableFuture.java:2186)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.thenAccept(FutureConvertersImpl.scala:37)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:279)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$: Cannot run class, since the workspace has errors.
+	at scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$.<clinit>(DebugProvider.scala)
+	at scala.meta.internal.metals.debug.DebugProvider.debugDiscovery(DebugProvider.scala:363)
+	at scala.meta.internal.metals.MetalsLanguageServer.executeCommand(MetalsLanguageServer.scala:1777)
+	at jdk.internal.reflect.GeneratedMethodAccessor12.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	... 9 more
+
+2022.02.22 15:20:48 WARN  1 deprecation (since 0.22.0)
+2022.02.22 15:20:48 WARN  1 deprecation (since 0.23.5)
+2022.02.22 15:20:48 WARN  2 deprecations in total; re-run with -deprecation for details
+2022.02.22 15:20:48 INFO  time: compiled root in 1.03s
+2022.02.22 15:20:49 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/ricardo/IdeaProjects/ScalaWithRicardo/.metals/dap-server.trace.json or /home/ricardo/.cache/metals/dap-server.trace.json
+2022.02.22 15:20:49 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/ricardo/IdeaProjects/ScalaWithRicardo/.metals/dap-client.trace.json or /home/ricardo/.cache/metals/dap-client.trace.json
+2022.02.22 15:20:50 INFO  Starting debug proxy for [robot.RobotAlpha]
+2022.02.22 15:20:50 INFO  Trying to attach to remote debuggee VM localhost:56229 .
+2022.02.22 15:20:50 INFO  Attaching to debuggee VM succeeded.
+2022.02.22 15:20:50 ERROR SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2022.02.22 15:20:50 ERROR SLF4J: Defaulting to no-operation (NOP) logger implementation
+2022.02.22 15:20:50 ERROR SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2022.02.22 15:20:51 ERROR searching for `#` failed
+scala.meta.internal.mtags.IndexingExceptions$InvalidSymbolException: #
+	at scala.meta.internal.mtags.OnDemandSymbolIndex.definitions(OnDemandSymbolIndex.scala:57)
+	at scala.meta.internal.metals.DestinationProvider.definition(DefinitionProvider.scala:313)
+	at scala.meta.internal.metals.DestinationProvider.fromSymbol(DefinitionProvider.scala:351)
+	at scala.meta.internal.metals.DestinationProvider.fromSymbol(DefinitionProvider.scala:371)
+	at scala.meta.internal.metals.DefinitionProvider.fromSymbol(DefinitionProvider.scala:104)
+	at scala.meta.internal.metals.StacktraceAnalyzer.findLocationForSymbol$1(StacktraceAnalyzer.scala:68)
+	at scala.meta.internal.metals.StacktraceAnalyzer.$anonfun$fileLocationFromLine$2(StacktraceAnalyzer.scala:73)
+	at scala.PartialFunction$Unlifted.applyOrElse(PartialFunction.scala:237)
+	at scala.collection.TraversableOnce.collectFirst(TraversableOnce.scala:180)
+	at scala.collection.TraversableOnce.collectFirst$(TraversableOnce.scala:167)
+	at scala.collection.AbstractTraversable.collectFirst(Traversable.scala:108)
+	at scala.meta.internal.metals.StacktraceAnalyzer.$anonfun$fileLocationFromLine$1(StacktraceAnalyzer.scala:73)
+	at scala.Option.flatMap(Option.scala:271)
+	at scala.meta.internal.metals.StacktraceAnalyzer.fileLocationFromLine(StacktraceAnalyzer.scala:71)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$handleServerMessage$1(DebugProxy.scala:183)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$handleServerMessage$1$adapted(DebugProxy.scala:160)
+	at scala.meta.internal.metals.debug.ServerAdapter.$anonfun$onReceived$1(ServerAdapter.scala:25)
+	at scala.meta.internal.metals.debug.MessageIdAdapter.$anonfun$listen$1(MessageIdAdapter.scala:57)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at scala.meta.internal.metals.debug.SocketEndpoint.listen(SocketEndpoint.scala:26)
+	at scala.meta.internal.metals.debug.MessageIdAdapter.listen(MessageIdAdapter.scala:47)
+	at scala.meta.internal.metals.debug.ServerAdapter.onReceived(ServerAdapter.scala:18)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$listenToServer$1(DebugProxy.scala:67)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2022.02.22 15:20:52 ERROR org.http4s.MalformedMessageBodyFailure: Malformed message body: Invalid JSON
+2022.02.22 15:20:52 ERROR 	at org.http4s.circe.CirceInstances$.$anonfun$defaultCirceParseError$1(CirceInstances.scala:267)
+2022.02.22 15:20:52 ERROR 	at org.http4s.circe.CirceInstances.$anonfun$jsonDecoderByteBufferImpl$2(CirceInstances.scala:62)
+2022.02.22 15:20:52 ERROR 	at cats.syntax.EitherOps$.leftMap$extension(either.scala:172)
+2022.02.22 15:20:52 ERROR 	at org.http4s.circe.CirceInstances.$anonfun$jsonDecoderByteBufferImpl$1(CirceInstances.scala:62)
+2022.02.22 15:20:52 ERROR 	at scala.util.Either.flatMap(Either.scala:352)
+2022.02.22 15:20:52 ERROR 	at cats.data.EitherT.$anonfun$subflatMap$1(EitherT.scala:415)
+2022.02.22 15:20:52 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:20:52 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:20:52 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:20:52 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:20:52 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:20:52 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:20:52 ERROR 	at clear @ org.http4s.client.middleware.Retry$.retryLoop$1(Retry.scala:84)
+2022.02.22 15:20:52 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:20:52 ERROR 	at rethrow$extension @ fs2.Compiler$Target.$anonfun$compile$1(Compiler.scala:156)
+2022.02.22 15:20:52 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:20:52 ERROR 	at flatMap @ fs2.Pull$.$anonfun$compile$21(Pull.scala:1185)
+2022.02.22 15:20:52 ERROR 	at update @ fs2.internal.Scope.releaseChildScope(Scope.scala:224)
+2022.02.22 15:20:52 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:20:52 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:20:52 ERROR Caused by: io.circe.ParsingFailure: expected json value got '�   ...' (line 1, column 1)
+2022.02.22 15:20:52 ERROR searching for `used by: io/circe/ParsingFailure: expected json value got '�   //#` failed
+scala.meta.internal.mtags.IndexingExceptions$InvalidSymbolException: used by: io/circe/ParsingFailure: expected json value got '�   //#
+	at scala.meta.internal.mtags.OnDemandSymbolIndex.definitions(OnDemandSymbolIndex.scala:57)
+	at scala.meta.internal.metals.DestinationProvider.definition(DefinitionProvider.scala:313)
+	at scala.meta.internal.metals.DestinationProvider.fromSymbol(DefinitionProvider.scala:351)
+	at scala.meta.internal.metals.DestinationProvider.fromSymbol(DefinitionProvider.scala:371)
+	at scala.meta.internal.metals.DefinitionProvider.fromSymbol(DefinitionProvider.scala:104)
+	at scala.meta.internal.metals.StacktraceAnalyzer.findLocationForSymbol$1(StacktraceAnalyzer.scala:68)
+	at scala.meta.internal.metals.StacktraceAnalyzer.$anonfun$fileLocationFromLine$2(StacktraceAnalyzer.scala:73)
+	at scala.PartialFunction$Unlifted.applyOrElse(PartialFunction.scala:237)
+	at scala.collection.TraversableOnce.collectFirst(TraversableOnce.scala:180)
+	at scala.collection.TraversableOnce.collectFirst$(TraversableOnce.scala:167)
+	at scala.collection.AbstractTraversable.collectFirst(Traversable.scala:108)
+	at scala.meta.internal.metals.StacktraceAnalyzer.$anonfun$fileLocationFromLine$1(StacktraceAnalyzer.scala:73)
+	at scala.Option.flatMap(Option.scala:271)
+	at scala.meta.internal.metals.StacktraceAnalyzer.fileLocationFromLine(StacktraceAnalyzer.scala:71)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$handleServerMessage$1(DebugProxy.scala:183)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$handleServerMessage$1$adapted(DebugProxy.scala:160)
+	at scala.meta.internal.metals.debug.ServerAdapter.$anonfun$onReceived$1(ServerAdapter.scala:25)
+	at scala.meta.internal.metals.debug.MessageIdAdapter.$anonfun$listen$1(MessageIdAdapter.scala:57)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at scala.meta.internal.metals.debug.SocketEndpoint.listen(SocketEndpoint.scala:26)
+	at scala.meta.internal.metals.debug.MessageIdAdapter.listen(MessageIdAdapter.scala:47)
+	at scala.meta.internal.metals.debug.ServerAdapter.onReceived(ServerAdapter.scala:18)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$listenToServer$1(DebugProxy.scala:67)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2022.02.22 15:20:52 INFO  Canceling debug proxy for [robot.RobotAlpha]
+2022.02.22 15:20:52 INFO  Closing debug server tcp://0.0.0.0:43143
+2022.02.22 15:21:13 INFO  compiling root (1 scala source)
+2022.02.22 15:21:13 INFO  Deduplicating compilation of root from bsp client 'Metals 0.11.1' (since 29m 1.29s)
+2022.02.22 15:21:13 INFO  compiling root (1 scala source)
+2022.02.22 15:21:14 WARN  1 deprecation (since 0.22.0)
+2022.02.22 15:21:14 WARN  1 deprecation (since 0.22.0)
+2022.02.22 15:21:14 WARN  1 deprecation (since 0.23.5)
+2022.02.22 15:21:14 WARN  2 deprecations in total; re-run with -deprecation for details
+2022.02.22 15:21:14 WARN  1 deprecation (since 0.23.5)
+2022.02.22 15:21:14 WARN  2 deprecations in total; re-run with -deprecation for details
+2022.02.22 15:21:14 INFO  time: compiled root in 1.79s
+2022.02.22 15:21:15 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/ricardo/IdeaProjects/ScalaWithRicardo/.metals/dap-server.trace.json or /home/ricardo/.cache/metals/dap-server.trace.json
+2022.02.22 15:21:15 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/ricardo/IdeaProjects/ScalaWithRicardo/.metals/dap-client.trace.json or /home/ricardo/.cache/metals/dap-client.trace.json
+2022.02.22 15:21:15 INFO  Starting debug proxy for [robot.RobotAlpha]
+2022.02.22 15:21:15 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/ricardo/IdeaProjects/ScalaWithRicardo/.metals/dap-server.trace.json or /home/ricardo/.cache/metals/dap-server.trace.json
+2022.02.22 15:21:14 ERROR java.nio.file.FileSystemAlreadyExistsException
+2022.02.22 15:21:14 INFO  Closing debug server tcp://0.0.0.0:41789
+2022.02.22 15:21:14 INFO  Trying to attach to remote debuggee VM localhost:57257 .
+2022.02.22 15:21:14 INFO  Attaching to debuggee VM succeeded.
+2022.02.22 15:21:16 ERROR SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2022.02.22 15:21:16 ERROR SLF4J: Defaulting to no-operation (NOP) logger implementation
+2022.02.22 15:21:16 ERROR SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2022.02.22 15:21:16 ERROR searching for `#` failed
+scala.meta.internal.mtags.IndexingExceptions$InvalidSymbolException: #
+	at scala.meta.internal.mtags.OnDemandSymbolIndex.definitions(OnDemandSymbolIndex.scala:57)
+	at scala.meta.internal.metals.DestinationProvider.definition(DefinitionProvider.scala:313)
+	at scala.meta.internal.metals.DestinationProvider.fromSymbol(DefinitionProvider.scala:351)
+	at scala.meta.internal.metals.DestinationProvider.fromSymbol(DefinitionProvider.scala:371)
+	at scala.meta.internal.metals.DefinitionProvider.fromSymbol(DefinitionProvider.scala:104)
+	at scala.meta.internal.metals.StacktraceAnalyzer.findLocationForSymbol$1(StacktraceAnalyzer.scala:68)
+	at scala.meta.internal.metals.StacktraceAnalyzer.$anonfun$fileLocationFromLine$2(StacktraceAnalyzer.scala:73)
+	at scala.PartialFunction$Unlifted.applyOrElse(PartialFunction.scala:237)
+	at scala.collection.TraversableOnce.collectFirst(TraversableOnce.scala:180)
+	at scala.collection.TraversableOnce.collectFirst$(TraversableOnce.scala:167)
+	at scala.collection.AbstractTraversable.collectFirst(Traversable.scala:108)
+	at scala.meta.internal.metals.StacktraceAnalyzer.$anonfun$fileLocationFromLine$1(StacktraceAnalyzer.scala:73)
+	at scala.Option.flatMap(Option.scala:271)
+	at scala.meta.internal.metals.StacktraceAnalyzer.fileLocationFromLine(StacktraceAnalyzer.scala:71)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$handleServerMessage$1(DebugProxy.scala:183)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$handleServerMessage$1$adapted(DebugProxy.scala:160)
+	at scala.meta.internal.metals.debug.ServerAdapter.$anonfun$onReceived$1(ServerAdapter.scala:25)
+	at scala.meta.internal.metals.debug.MessageIdAdapter.$anonfun$listen$1(MessageIdAdapter.scala:57)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at scala.meta.internal.metals.debug.SocketEndpoint.listen(SocketEndpoint.scala:26)
+	at scala.meta.internal.metals.debug.MessageIdAdapter.listen(MessageIdAdapter.scala:47)
+	at scala.meta.internal.metals.debug.ServerAdapter.onReceived(ServerAdapter.scala:18)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$listenToServer$1(DebugProxy.scala:67)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2022.02.22 15:21:18 ERROR org.http4s.MalformedMessageBodyFailure: Malformed message body: Invalid JSON
+2022.02.22 15:21:18 ERROR 	at org.http4s.circe.CirceInstances$.$anonfun$defaultCirceParseError$1(CirceInstances.scala:267)
+2022.02.22 15:21:18 ERROR 	at org.http4s.circe.CirceInstances.$anonfun$jsonDecoderByteBufferImpl$2(CirceInstances.scala:62)
+2022.02.22 15:21:18 ERROR 	at cats.syntax.EitherOps$.leftMap$extension(either.scala:172)
+2022.02.22 15:21:18 ERROR 	at org.http4s.circe.CirceInstances.$anonfun$jsonDecoderByteBufferImpl$1(CirceInstances.scala:62)
+2022.02.22 15:21:18 ERROR 	at scala.util.Either.flatMap(Either.scala:352)
+2022.02.22 15:21:18 ERROR 	at cats.data.EitherT.$anonfun$subflatMap$1(EitherT.scala:415)
+2022.02.22 15:21:18 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:21:18 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:21:18 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:21:18 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:21:18 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:21:18 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:21:18 ERROR 	at clear @ org.http4s.client.middleware.Retry$.retryLoop$1(Retry.scala:84)
+2022.02.22 15:21:18 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:21:18 ERROR 	at rethrow$extension @ fs2.Compiler$Target.$anonfun$compile$1(Compiler.scala:156)
+2022.02.22 15:21:18 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:21:18 ERROR 	at flatMap @ fs2.Pull$.$anonfun$compile$21(Pull.scala:1185)
+2022.02.22 15:21:18 ERROR 	at update @ fs2.internal.Scope.releaseChildScope(Scope.scala:224)
+2022.02.22 15:21:18 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:21:18 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:21:18 ERROR Caused by: io.circe.ParsingFailure: expected json value got '�   ...' (line 1, column 1)
+2022.02.22 15:21:18 ERROR searching for `used by: io/circe/ParsingFailure: expected json value got '�   //#` failed
+scala.meta.internal.mtags.IndexingExceptions$InvalidSymbolException: used by: io/circe/ParsingFailure: expected json value got '�   //#
+	at scala.meta.internal.mtags.OnDemandSymbolIndex.definitions(OnDemandSymbolIndex.scala:57)
+	at scala.meta.internal.metals.DestinationProvider.definition(DefinitionProvider.scala:313)
+	at scala.meta.internal.metals.DestinationProvider.fromSymbol(DefinitionProvider.scala:351)
+	at scala.meta.internal.metals.DestinationProvider.fromSymbol(DefinitionProvider.scala:371)
+	at scala.meta.internal.metals.DefinitionProvider.fromSymbol(DefinitionProvider.scala:104)
+	at scala.meta.internal.metals.StacktraceAnalyzer.findLocationForSymbol$1(StacktraceAnalyzer.scala:68)
+	at scala.meta.internal.metals.StacktraceAnalyzer.$anonfun$fileLocationFromLine$2(StacktraceAnalyzer.scala:73)
+	at scala.PartialFunction$Unlifted.applyOrElse(PartialFunction.scala:237)
+	at scala.collection.TraversableOnce.collectFirst(TraversableOnce.scala:180)
+	at scala.collection.TraversableOnce.collectFirst$(TraversableOnce.scala:167)
+	at scala.collection.AbstractTraversable.collectFirst(Traversable.scala:108)
+	at scala.meta.internal.metals.StacktraceAnalyzer.$anonfun$fileLocationFromLine$1(StacktraceAnalyzer.scala:73)
+	at scala.Option.flatMap(Option.scala:271)
+	at scala.meta.internal.metals.StacktraceAnalyzer.fileLocationFromLine(StacktraceAnalyzer.scala:71)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$handleServerMessage$1(DebugProxy.scala:183)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$handleServerMessage$1$adapted(DebugProxy.scala:160)
+	at scala.meta.internal.metals.debug.ServerAdapter.$anonfun$onReceived$1(ServerAdapter.scala:25)
+	at scala.meta.internal.metals.debug.MessageIdAdapter.$anonfun$listen$1(MessageIdAdapter.scala:57)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at scala.meta.internal.metals.debug.SocketEndpoint.listen(SocketEndpoint.scala:26)
+	at scala.meta.internal.metals.debug.MessageIdAdapter.listen(MessageIdAdapter.scala:47)
+	at scala.meta.internal.metals.debug.ServerAdapter.onReceived(ServerAdapter.scala:18)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$listenToServer$1(DebugProxy.scala:67)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2022.02.22 15:21:18 INFO  Closing debug server tcp://0.0.0.0:41913
+2022.02.22 15:21:18 INFO  Canceling debug proxy for [robot.RobotAlpha]
+Exception in thread "pool-15-thread-1" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.$anonfun$onCompilerJobQueue$1(CompilerAccess.scala:195)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:139)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022.02.22 15:22:22 INFO  compiling root (1 scala source)
+2022.02.22 15:22:22 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:22:22 INFO  Deduplicating compilation of root from bsp client 'Metals 0.11.1' (since 30m 10.316s)
+2022.02.22 15:22:22 INFO  compiling root (1 scala source)
+2022.02.22 15:22:22 WARN  1 deprecation (since 0.22.0)
+2022.02.22 15:22:22 WARN  1 deprecation (since 0.22.0)
+2022.02.22 15:22:22 WARN  1 deprecation (since 0.23.5)
+2022.02.22 15:22:22 WARN  1 deprecation (since 0.23.5)
+2022.02.22 15:22:22 WARN  2 deprecations in total; re-run with -deprecation for details
+2022.02.22 15:22:22 WARN  2 deprecations in total; re-run with -deprecation for details
+2022.02.22 15:22:22 INFO  time: compiled root in 0.96s
+2022.02.22 15:22:23 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/ricardo/IdeaProjects/ScalaWithRicardo/.metals/dap-server.trace.json or /home/ricardo/.cache/metals/dap-server.trace.json
+2022.02.22 15:22:23 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/ricardo/IdeaProjects/ScalaWithRicardo/.metals/dap-client.trace.json or /home/ricardo/.cache/metals/dap-client.trace.json
+2022.02.22 15:22:23 INFO  Starting debug proxy for [robot.RobotAlpha]
+2022.02.22 15:22:23 INFO  Trying to attach to remote debuggee VM localhost:39247 .
+2022.02.22 15:22:23 INFO  Attaching to debuggee VM succeeded.
+2022.02.22 15:22:23 ERROR SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2022.02.22 15:22:23 ERROR SLF4J: Defaulting to no-operation (NOP) logger implementation
+2022.02.22 15:22:23 ERROR SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2022.02.22 15:22:24 ERROR searching for `#` failed
+scala.meta.internal.mtags.IndexingExceptions$InvalidSymbolException: #
+	at scala.meta.internal.mtags.OnDemandSymbolIndex.definitions(OnDemandSymbolIndex.scala:57)
+	at scala.meta.internal.metals.DestinationProvider.definition(DefinitionProvider.scala:313)
+	at scala.meta.internal.metals.DestinationProvider.fromSymbol(DefinitionProvider.scala:351)
+	at scala.meta.internal.metals.DestinationProvider.fromSymbol(DefinitionProvider.scala:371)
+	at scala.meta.internal.metals.DefinitionProvider.fromSymbol(DefinitionProvider.scala:104)
+	at scala.meta.internal.metals.StacktraceAnalyzer.findLocationForSymbol$1(StacktraceAnalyzer.scala:68)
+	at scala.meta.internal.metals.StacktraceAnalyzer.$anonfun$fileLocationFromLine$2(StacktraceAnalyzer.scala:73)
+	at scala.PartialFunction$Unlifted.applyOrElse(PartialFunction.scala:237)
+	at scala.collection.TraversableOnce.collectFirst(TraversableOnce.scala:180)
+	at scala.collection.TraversableOnce.collectFirst$(TraversableOnce.scala:167)
+	at scala.collection.AbstractTraversable.collectFirst(Traversable.scala:108)
+	at scala.meta.internal.metals.StacktraceAnalyzer.$anonfun$fileLocationFromLine$1(StacktraceAnalyzer.scala:73)
+	at scala.Option.flatMap(Option.scala:271)
+	at scala.meta.internal.metals.StacktraceAnalyzer.fileLocationFromLine(StacktraceAnalyzer.scala:71)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$handleServerMessage$1(DebugProxy.scala:183)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$handleServerMessage$1$adapted(DebugProxy.scala:160)
+	at scala.meta.internal.metals.debug.ServerAdapter.$anonfun$onReceived$1(ServerAdapter.scala:25)
+	at scala.meta.internal.metals.debug.MessageIdAdapter.$anonfun$listen$1(MessageIdAdapter.scala:57)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at scala.meta.internal.metals.debug.SocketEndpoint.listen(SocketEndpoint.scala:26)
+	at scala.meta.internal.metals.debug.MessageIdAdapter.listen(MessageIdAdapter.scala:47)
+	at scala.meta.internal.metals.debug.ServerAdapter.onReceived(ServerAdapter.scala:18)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$listenToServer$1(DebugProxy.scala:67)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2022.02.22 15:22:25 ERROR org.http4s.MalformedMessageBodyFailure: Malformed message body: Invalid JSON
+2022.02.22 15:22:25 ERROR 	at org.http4s.circe.CirceInstances$.$anonfun$defaultCirceParseError$1(CirceInstances.scala:267)
+2022.02.22 15:22:25 ERROR 	at org.http4s.circe.CirceInstances.$anonfun$jsonDecoderByteBufferImpl$2(CirceInstances.scala:62)
+2022.02.22 15:22:25 ERROR 	at cats.syntax.EitherOps$.leftMap$extension(either.scala:172)
+2022.02.22 15:22:25 ERROR 	at org.http4s.circe.CirceInstances.$anonfun$jsonDecoderByteBufferImpl$1(CirceInstances.scala:62)
+2022.02.22 15:22:25 ERROR 	at scala.util.Either.flatMap(Either.scala:352)
+2022.02.22 15:22:25 ERROR 	at cats.data.EitherT.$anonfun$subflatMap$1(EitherT.scala:415)
+2022.02.22 15:22:25 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:22:25 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:22:25 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:22:25 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:22:25 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:22:25 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:22:25 ERROR 	at clear @ org.http4s.client.middleware.Retry$.retryLoop$1(Retry.scala:84)
+2022.02.22 15:22:25 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:22:25 ERROR 	at rethrow$extension @ fs2.Compiler$Target.$anonfun$compile$1(Compiler.scala:156)
+2022.02.22 15:22:25 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:22:25 ERROR 	at flatMap @ fs2.Pull$.$anonfun$compile$21(Pull.scala:1185)
+2022.02.22 15:22:25 ERROR 	at update @ fs2.internal.Scope.releaseChildScope(Scope.scala:224)
+2022.02.22 15:22:25 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:22:25 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:22:25 ERROR Caused by: io.circe.ParsingFailure: expected json value got '�   ...' (line 1, column 1)
+2022.02.22 15:22:26 ERROR searching for `used by: io/circe/ParsingFailure: expected json value got '�   //#` failed
+scala.meta.internal.mtags.IndexingExceptions$InvalidSymbolException: used by: io/circe/ParsingFailure: expected json value got '�   //#
+	at scala.meta.internal.mtags.OnDemandSymbolIndex.definitions(OnDemandSymbolIndex.scala:57)
+	at scala.meta.internal.metals.DestinationProvider.definition(DefinitionProvider.scala:313)
+	at scala.meta.internal.metals.DestinationProvider.fromSymbol(DefinitionProvider.scala:351)
+	at scala.meta.internal.metals.DestinationProvider.fromSymbol(DefinitionProvider.scala:371)
+	at scala.meta.internal.metals.DefinitionProvider.fromSymbol(DefinitionProvider.scala:104)
+	at scala.meta.internal.metals.StacktraceAnalyzer.findLocationForSymbol$1(StacktraceAnalyzer.scala:68)
+	at scala.meta.internal.metals.StacktraceAnalyzer.$anonfun$fileLocationFromLine$2(StacktraceAnalyzer.scala:73)
+	at scala.PartialFunction$Unlifted.applyOrElse(PartialFunction.scala:237)
+	at scala.collection.TraversableOnce.collectFirst(TraversableOnce.scala:180)
+	at scala.collection.TraversableOnce.collectFirst$(TraversableOnce.scala:167)
+	at scala.collection.AbstractTraversable.collectFirst(Traversable.scala:108)
+	at scala.meta.internal.metals.StacktraceAnalyzer.$anonfun$fileLocationFromLine$1(StacktraceAnalyzer.scala:73)
+	at scala.Option.flatMap(Option.scala:271)
+	at scala.meta.internal.metals.StacktraceAnalyzer.fileLocationFromLine(StacktraceAnalyzer.scala:71)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$handleServerMessage$1(DebugProxy.scala:183)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$handleServerMessage$1$adapted(DebugProxy.scala:160)
+	at scala.meta.internal.metals.debug.ServerAdapter.$anonfun$onReceived$1(ServerAdapter.scala:25)
+	at scala.meta.internal.metals.debug.MessageIdAdapter.$anonfun$listen$1(MessageIdAdapter.scala:57)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at scala.meta.internal.metals.debug.SocketEndpoint.listen(SocketEndpoint.scala:26)
+	at scala.meta.internal.metals.debug.MessageIdAdapter.listen(MessageIdAdapter.scala:47)
+	at scala.meta.internal.metals.debug.ServerAdapter.onReceived(ServerAdapter.scala:18)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$listenToServer$1(DebugProxy.scala:67)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2022.02.22 15:22:25 INFO  Closing debug server tcp://0.0.0.0:39433
+2022.02.22 15:22:26 INFO  Canceling debug proxy for [robot.RobotAlpha]
+2022.02.22 15:23:45 INFO  compiling root (1 scala source)
+2022.02.22 15:23:45 INFO  Deduplicating compilation of root from bsp client 'Metals 0.11.1' (since 31m 33.223s)
+2022.02.22 15:23:45 INFO  compiling root (1 scala source)
+2022.02.22 15:23:45 WARN  1 deprecation (since 0.22.0)
+2022.02.22 15:23:45 WARN  1 deprecation (since 0.23.5)
+2022.02.22 15:23:45 WARN  1 deprecation (since 0.22.0)
+2022.02.22 15:23:45 WARN  2 deprecations in total; re-run with -deprecation for details
+2022.02.22 15:23:45 WARN  1 deprecation (since 0.23.5)
+2022.02.22 15:23:45 WARN  2 deprecations in total; re-run with -deprecation for details
+2022.02.22 15:23:45 INFO  time: compiled root in 0.91s
+2022.02.22 15:23:46 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/ricardo/IdeaProjects/ScalaWithRicardo/.metals/dap-server.trace.json or /home/ricardo/.cache/metals/dap-server.trace.json
+2022.02.22 15:23:46 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/ricardo/IdeaProjects/ScalaWithRicardo/.metals/dap-client.trace.json or /home/ricardo/.cache/metals/dap-client.trace.json
+2022.02.22 15:23:46 INFO  Starting debug proxy for [robot.RobotAlpha]
+2022.02.22 15:23:46 INFO  Trying to attach to remote debuggee VM localhost:57825 .
+2022.02.22 15:23:46 INFO  Attaching to debuggee VM succeeded.
+2022.02.22 15:23:46 ERROR SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2022.02.22 15:23:47 ERROR searching for `#` failed
+scala.meta.internal.mtags.IndexingExceptions$InvalidSymbolException: #
+	at scala.meta.internal.mtags.OnDemandSymbolIndex.definitions(OnDemandSymbolIndex.scala:57)
+	at scala.meta.internal.metals.DestinationProvider.definition(DefinitionProvider.scala:313)
+	at scala.meta.internal.metals.DestinationProvider.fromSymbol(DefinitionProvider.scala:351)
+	at scala.meta.internal.metals.DestinationProvider.fromSymbol(DefinitionProvider.scala:371)
+	at scala.meta.internal.metals.DefinitionProvider.fromSymbol(DefinitionProvider.scala:104)
+	at scala.meta.internal.metals.StacktraceAnalyzer.findLocationForSymbol$1(StacktraceAnalyzer.scala:68)
+	at scala.meta.internal.metals.StacktraceAnalyzer.$anonfun$fileLocationFromLine$2(StacktraceAnalyzer.scala:73)
+	at scala.PartialFunction$Unlifted.applyOrElse(PartialFunction.scala:237)
+	at scala.collection.TraversableOnce.collectFirst(TraversableOnce.scala:180)
+	at scala.collection.TraversableOnce.collectFirst$(TraversableOnce.scala:167)
+	at scala.collection.AbstractTraversable.collectFirst(Traversable.scala:108)
+	at scala.meta.internal.metals.StacktraceAnalyzer.$anonfun$fileLocationFromLine$1(StacktraceAnalyzer.scala:73)
+	at scala.Option.flatMap(Option.scala:271)
+	at scala.meta.internal.metals.StacktraceAnalyzer.fileLocationFromLine(StacktraceAnalyzer.scala:71)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$handleServerMessage$1(DebugProxy.scala:183)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$handleServerMessage$1$adapted(DebugProxy.scala:160)
+	at scala.meta.internal.metals.debug.ServerAdapter.$anonfun$onReceived$1(ServerAdapter.scala:25)
+	at scala.meta.internal.metals.debug.MessageIdAdapter.$anonfun$listen$1(MessageIdAdapter.scala:57)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at scala.meta.internal.metals.debug.SocketEndpoint.listen(SocketEndpoint.scala:26)
+	at scala.meta.internal.metals.debug.MessageIdAdapter.listen(MessageIdAdapter.scala:47)
+	at scala.meta.internal.metals.debug.ServerAdapter.onReceived(ServerAdapter.scala:18)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$listenToServer$1(DebugProxy.scala:67)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2022.02.22 15:23:46 ERROR SLF4J: Defaulting to no-operation (NOP) logger implementation
+2022.02.22 15:23:46 ERROR SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2022.02.22 15:23:48 ERROR org.http4s.MalformedMessageBodyFailure: Malformed message body: Invalid JSON
+2022.02.22 15:23:48 ERROR 	at org.http4s.circe.CirceInstances$.$anonfun$defaultCirceParseError$1(CirceInstances.scala:267)
+2022.02.22 15:23:48 ERROR 	at org.http4s.circe.CirceInstances.$anonfun$jsonDecoderByteBufferImpl$2(CirceInstances.scala:62)
+2022.02.22 15:23:48 ERROR 	at cats.syntax.EitherOps$.leftMap$extension(either.scala:172)
+2022.02.22 15:23:48 ERROR 	at org.http4s.circe.CirceInstances.$anonfun$jsonDecoderByteBufferImpl$1(CirceInstances.scala:62)
+2022.02.22 15:23:48 ERROR 	at scala.util.Either.flatMap(Either.scala:352)
+2022.02.22 15:23:48 ERROR 	at cats.data.EitherT.$anonfun$subflatMap$1(EitherT.scala:415)
+2022.02.22 15:23:48 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:23:48 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:23:48 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:23:48 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:23:48 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:23:48 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:23:48 ERROR 	at clear @ org.http4s.client.middleware.Retry$.retryLoop$1(Retry.scala:84)
+2022.02.22 15:23:48 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:23:48 ERROR 	at rethrow$extension @ fs2.Compiler$Target.$anonfun$compile$1(Compiler.scala:156)
+2022.02.22 15:23:48 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:23:48 ERROR 	at flatMap @ fs2.Pull$.$anonfun$compile$21(Pull.scala:1185)
+2022.02.22 15:23:48 ERROR 	at update @ fs2.internal.Scope.releaseChildScope(Scope.scala:224)
+2022.02.22 15:23:48 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:23:48 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:23:48 ERROR Caused by: io.circe.ParsingFailure: expected json value got '�   ...' (line 1, column 1)
+2022.02.22 15:23:48 ERROR searching for `used by: io/circe/ParsingFailure: expected json value got '�   //#` failed
+scala.meta.internal.mtags.IndexingExceptions$InvalidSymbolException: used by: io/circe/ParsingFailure: expected json value got '�   //#
+	at scala.meta.internal.mtags.OnDemandSymbolIndex.definitions(OnDemandSymbolIndex.scala:57)
+	at scala.meta.internal.metals.DestinationProvider.definition(DefinitionProvider.scala:313)
+	at scala.meta.internal.metals.DestinationProvider.fromSymbol(DefinitionProvider.scala:351)
+	at scala.meta.internal.metals.DestinationProvider.fromSymbol(DefinitionProvider.scala:371)
+	at scala.meta.internal.metals.DefinitionProvider.fromSymbol(DefinitionProvider.scala:104)
+	at scala.meta.internal.metals.StacktraceAnalyzer.findLocationForSymbol$1(StacktraceAnalyzer.scala:68)
+	at scala.meta.internal.metals.StacktraceAnalyzer.$anonfun$fileLocationFromLine$2(StacktraceAnalyzer.scala:73)
+	at scala.PartialFunction$Unlifted.applyOrElse(PartialFunction.scala:237)
+	at scala.collection.TraversableOnce.collectFirst(TraversableOnce.scala:180)
+	at scala.collection.TraversableOnce.collectFirst$(TraversableOnce.scala:167)
+	at scala.collection.AbstractTraversable.collectFirst(Traversable.scala:108)
+	at scala.meta.internal.metals.StacktraceAnalyzer.$anonfun$fileLocationFromLine$1(StacktraceAnalyzer.scala:73)
+	at scala.Option.flatMap(Option.scala:271)
+	at scala.meta.internal.metals.StacktraceAnalyzer.fileLocationFromLine(StacktraceAnalyzer.scala:71)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$handleServerMessage$1(DebugProxy.scala:183)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$handleServerMessage$1$adapted(DebugProxy.scala:160)
+	at scala.meta.internal.metals.debug.ServerAdapter.$anonfun$onReceived$1(ServerAdapter.scala:25)
+	at scala.meta.internal.metals.debug.MessageIdAdapter.$anonfun$listen$1(MessageIdAdapter.scala:57)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at scala.meta.internal.metals.debug.SocketEndpoint.listen(SocketEndpoint.scala:26)
+	at scala.meta.internal.metals.debug.MessageIdAdapter.listen(MessageIdAdapter.scala:47)
+	at scala.meta.internal.metals.debug.ServerAdapter.onReceived(ServerAdapter.scala:18)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$listenToServer$1(DebugProxy.scala:67)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2022.02.22 15:23:48 INFO  Canceling debug proxy for [robot.RobotAlpha]
+2022.02.22 15:23:48 INFO  Closing debug server tcp://0.0.0.0:39579
+2022.02.22 15:25:48 INFO  compiling root (1 scala source)
+2022.02.22 15:25:48 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:25:48 INFO  Deduplicating compilation of root from bsp client 'Metals 0.11.1' (since 33m 37.028s)
+2022.02.22 15:25:48 INFO  compiling root (1 scala source)
+2022.02.22 15:25:48 WARN  1 deprecation (since 0.22.0)
+2022.02.22 15:25:48 WARN  1 deprecation (since 0.23.5)
+2022.02.22 15:25:48 WARN  2 deprecations in total; re-run with -deprecation for details
+2022.02.22 15:25:48 WARN  1 deprecation (since 0.22.0)
+2022.02.22 15:25:48 WARN  1 deprecation (since 0.23.5)
+2022.02.22 15:25:48 WARN  2 deprecations in total; re-run with -deprecation for details
+2022.02.22 15:25:48 INFO  time: compiled root in 0.88s
+2022.02.22 15:25:49 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/ricardo/IdeaProjects/ScalaWithRicardo/.metals/dap-server.trace.json or /home/ricardo/.cache/metals/dap-server.trace.json
+2022.02.22 15:25:49 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/ricardo/IdeaProjects/ScalaWithRicardo/.metals/dap-client.trace.json or /home/ricardo/.cache/metals/dap-client.trace.json
+2022.02.22 15:25:49 INFO  Starting debug proxy for [robot.RobotAlpha]
+2022.02.22 15:25:50 INFO  Trying to attach to remote debuggee VM localhost:48447 .
+2022.02.22 15:25:50 INFO  Attaching to debuggee VM succeeded.
+2022.02.22 15:25:50 ERROR SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2022.02.22 15:25:50 ERROR SLF4J: Defaulting to no-operation (NOP) logger implementation
+2022.02.22 15:25:50 ERROR SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2022.02.22 15:25:51 ERROR searching for `#` failed
+scala.meta.internal.mtags.IndexingExceptions$InvalidSymbolException: #
+	at scala.meta.internal.mtags.OnDemandSymbolIndex.definitions(OnDemandSymbolIndex.scala:57)
+	at scala.meta.internal.metals.DestinationProvider.definition(DefinitionProvider.scala:313)
+	at scala.meta.internal.metals.DestinationProvider.fromSymbol(DefinitionProvider.scala:351)
+	at scala.meta.internal.metals.DestinationProvider.fromSymbol(DefinitionProvider.scala:371)
+	at scala.meta.internal.metals.DefinitionProvider.fromSymbol(DefinitionProvider.scala:104)
+	at scala.meta.internal.metals.StacktraceAnalyzer.findLocationForSymbol$1(StacktraceAnalyzer.scala:68)
+	at scala.meta.internal.metals.StacktraceAnalyzer.$anonfun$fileLocationFromLine$2(StacktraceAnalyzer.scala:73)
+	at scala.PartialFunction$Unlifted.applyOrElse(PartialFunction.scala:237)
+	at scala.collection.TraversableOnce.collectFirst(TraversableOnce.scala:180)
+	at scala.collection.TraversableOnce.collectFirst$(TraversableOnce.scala:167)
+	at scala.collection.AbstractTraversable.collectFirst(Traversable.scala:108)
+	at scala.meta.internal.metals.StacktraceAnalyzer.$anonfun$fileLocationFromLine$1(StacktraceAnalyzer.scala:73)
+	at scala.Option.flatMap(Option.scala:271)
+	at scala.meta.internal.metals.StacktraceAnalyzer.fileLocationFromLine(StacktraceAnalyzer.scala:71)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$handleServerMessage$1(DebugProxy.scala:183)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$handleServerMessage$1$adapted(DebugProxy.scala:160)
+	at scala.meta.internal.metals.debug.ServerAdapter.$anonfun$onReceived$1(ServerAdapter.scala:25)
+	at scala.meta.internal.metals.debug.MessageIdAdapter.$anonfun$listen$1(MessageIdAdapter.scala:57)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at scala.meta.internal.metals.debug.SocketEndpoint.listen(SocketEndpoint.scala:26)
+	at scala.meta.internal.metals.debug.MessageIdAdapter.listen(MessageIdAdapter.scala:47)
+	at scala.meta.internal.metals.debug.ServerAdapter.onReceived(ServerAdapter.scala:18)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$listenToServer$1(DebugProxy.scala:67)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2022.02.22 15:25:52 ERROR org.http4s.MalformedMessageBodyFailure: Malformed message body: Invalid JSON
+2022.02.22 15:25:52 ERROR 	at org.http4s.circe.CirceInstances$.$anonfun$defaultCirceParseError$1(CirceInstances.scala:267)
+2022.02.22 15:25:52 ERROR 	at org.http4s.circe.CirceInstances.$anonfun$jsonDecoderByteBufferImpl$2(CirceInstances.scala:62)
+2022.02.22 15:25:52 ERROR 	at cats.syntax.EitherOps$.leftMap$extension(either.scala:172)
+2022.02.22 15:25:52 ERROR 	at org.http4s.circe.CirceInstances.$anonfun$jsonDecoderByteBufferImpl$1(CirceInstances.scala:62)
+2022.02.22 15:25:52 ERROR 	at scala.util.Either.flatMap(Either.scala:352)
+2022.02.22 15:25:52 ERROR 	at cats.data.EitherT.$anonfun$subflatMap$1(EitherT.scala:415)
+2022.02.22 15:25:52 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:25:52 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:25:52 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:25:52 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:25:52 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:25:52 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:25:52 ERROR 	at clear @ org.http4s.client.middleware.Retry$.retryLoop$1(Retry.scala:84)
+2022.02.22 15:25:52 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:25:52 ERROR 	at rethrow$extension @ fs2.Compiler$Target.$anonfun$compile$1(Compiler.scala:156)
+2022.02.22 15:25:52 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:25:52 ERROR 	at flatMap @ fs2.Pull$.$anonfun$compile$21(Pull.scala:1185)
+2022.02.22 15:25:52 ERROR 	at update @ fs2.internal.Scope.releaseChildScope(Scope.scala:224)
+2022.02.22 15:25:52 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:25:52 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:25:52 ERROR Caused by: io.circe.ParsingFailure: expected json value got '�   ...' (line 1, column 1)
+2022.02.22 15:25:52 ERROR searching for `used by: io/circe/ParsingFailure: expected json value got '�   //#` failed
+scala.meta.internal.mtags.IndexingExceptions$InvalidSymbolException: used by: io/circe/ParsingFailure: expected json value got '�   //#
+	at scala.meta.internal.mtags.OnDemandSymbolIndex.definitions(OnDemandSymbolIndex.scala:57)
+	at scala.meta.internal.metals.DestinationProvider.definition(DefinitionProvider.scala:313)
+	at scala.meta.internal.metals.DestinationProvider.fromSymbol(DefinitionProvider.scala:351)
+	at scala.meta.internal.metals.DestinationProvider.fromSymbol(DefinitionProvider.scala:371)
+	at scala.meta.internal.metals.DefinitionProvider.fromSymbol(DefinitionProvider.scala:104)
+	at scala.meta.internal.metals.StacktraceAnalyzer.findLocationForSymbol$1(StacktraceAnalyzer.scala:68)
+	at scala.meta.internal.metals.StacktraceAnalyzer.$anonfun$fileLocationFromLine$2(StacktraceAnalyzer.scala:73)
+	at scala.PartialFunction$Unlifted.applyOrElse(PartialFunction.scala:237)
+	at scala.collection.TraversableOnce.collectFirst(TraversableOnce.scala:180)
+	at scala.collection.TraversableOnce.collectFirst$(TraversableOnce.scala:167)
+	at scala.collection.AbstractTraversable.collectFirst(Traversable.scala:108)
+	at scala.meta.internal.metals.StacktraceAnalyzer.$anonfun$fileLocationFromLine$1(StacktraceAnalyzer.scala:73)
+	at scala.Option.flatMap(Option.scala:271)
+	at scala.meta.internal.metals.StacktraceAnalyzer.fileLocationFromLine(StacktraceAnalyzer.scala:71)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$handleServerMessage$1(DebugProxy.scala:183)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$handleServerMessage$1$adapted(DebugProxy.scala:160)
+	at scala.meta.internal.metals.debug.ServerAdapter.$anonfun$onReceived$1(ServerAdapter.scala:25)
+	at scala.meta.internal.metals.debug.MessageIdAdapter.$anonfun$listen$1(MessageIdAdapter.scala:57)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at scala.meta.internal.metals.debug.SocketEndpoint.listen(SocketEndpoint.scala:26)
+	at scala.meta.internal.metals.debug.MessageIdAdapter.listen(MessageIdAdapter.scala:47)
+	at scala.meta.internal.metals.debug.ServerAdapter.onReceived(ServerAdapter.scala:18)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$listenToServer$1(DebugProxy.scala:67)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2022.02.22 15:25:52 INFO  Closing debug server tcp://0.0.0.0:41469
+2022.02.22 15:25:52 INFO  Canceling debug proxy for [robot.RobotAlpha]
+2022.02.22 15:26:52 INFO  compiling root (1 scala source)
+2022.02.22 15:26:52 INFO  Deduplicating compilation of root from bsp client 'Metals 0.11.1' (since 34m 40.193s)
+2022.02.22 15:26:52 INFO  compiling root (1 scala source)
+2022.02.22 15:26:52 WARN  1 deprecation (since 0.22.0)
+2022.02.22 15:26:52 WARN  1 deprecation (since 0.23.5)
+2022.02.22 15:26:52 WARN  1 deprecation (since 0.22.0)
+2022.02.22 15:26:52 WARN  2 deprecations in total; re-run with -deprecation for details
+2022.02.22 15:26:52 WARN  1 deprecation (since 0.23.5)
+2022.02.22 15:26:52 WARN  2 deprecations in total; re-run with -deprecation for details
+2022.02.22 15:26:52 INFO  time: compiled root in 0.95s
+2022.02.22 15:26:53 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/ricardo/IdeaProjects/ScalaWithRicardo/.metals/dap-server.trace.json or /home/ricardo/.cache/metals/dap-server.trace.json
+2022.02.22 15:26:53 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/ricardo/IdeaProjects/ScalaWithRicardo/.metals/dap-client.trace.json or /home/ricardo/.cache/metals/dap-client.trace.json
+2022.02.22 15:26:53 INFO  Starting debug proxy for [robot.RobotAlpha]
+2022.02.22 15:26:53 INFO  Trying to attach to remote debuggee VM localhost:44925 .
+2022.02.22 15:26:53 INFO  Attaching to debuggee VM succeeded.
+2022.02.22 15:26:53 ERROR SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2022.02.22 15:26:53 ERROR SLF4J: Defaulting to no-operation (NOP) logger implementation
+2022.02.22 15:26:54 ERROR searching for `#` failed
+scala.meta.internal.mtags.IndexingExceptions$InvalidSymbolException: #
+	at scala.meta.internal.mtags.OnDemandSymbolIndex.definitions(OnDemandSymbolIndex.scala:57)
+	at scala.meta.internal.metals.DestinationProvider.definition(DefinitionProvider.scala:313)
+	at scala.meta.internal.metals.DestinationProvider.fromSymbol(DefinitionProvider.scala:351)
+	at scala.meta.internal.metals.DestinationProvider.fromSymbol(DefinitionProvider.scala:371)
+	at scala.meta.internal.metals.DefinitionProvider.fromSymbol(DefinitionProvider.scala:104)
+	at scala.meta.internal.metals.StacktraceAnalyzer.findLocationForSymbol$1(StacktraceAnalyzer.scala:68)
+	at scala.meta.internal.metals.StacktraceAnalyzer.$anonfun$fileLocationFromLine$2(StacktraceAnalyzer.scala:73)
+	at scala.PartialFunction$Unlifted.applyOrElse(PartialFunction.scala:237)
+	at scala.collection.TraversableOnce.collectFirst(TraversableOnce.scala:180)
+	at scala.collection.TraversableOnce.collectFirst$(TraversableOnce.scala:167)
+	at scala.collection.AbstractTraversable.collectFirst(Traversable.scala:108)
+	at scala.meta.internal.metals.StacktraceAnalyzer.$anonfun$fileLocationFromLine$1(StacktraceAnalyzer.scala:73)
+	at scala.Option.flatMap(Option.scala:271)
+	at scala.meta.internal.metals.StacktraceAnalyzer.fileLocationFromLine(StacktraceAnalyzer.scala:71)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$handleServerMessage$1(DebugProxy.scala:183)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$handleServerMessage$1$adapted(DebugProxy.scala:160)
+	at scala.meta.internal.metals.debug.ServerAdapter.$anonfun$onReceived$1(ServerAdapter.scala:25)
+	at scala.meta.internal.metals.debug.MessageIdAdapter.$anonfun$listen$1(MessageIdAdapter.scala:57)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at scala.meta.internal.metals.debug.SocketEndpoint.listen(SocketEndpoint.scala:26)
+	at scala.meta.internal.metals.debug.MessageIdAdapter.listen(MessageIdAdapter.scala:47)
+	at scala.meta.internal.metals.debug.ServerAdapter.onReceived(ServerAdapter.scala:18)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$listenToServer$1(DebugProxy.scala:67)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2022.02.22 15:26:53 ERROR SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2022.02.22 15:26:55 ERROR org.http4s.MalformedMessageBodyFailure: Malformed message body: Invalid JSON
+2022.02.22 15:26:55 ERROR 	at org.http4s.circe.CirceInstances$.$anonfun$defaultCirceParseError$1(CirceInstances.scala:267)
+2022.02.22 15:26:55 ERROR 	at org.http4s.circe.CirceInstances.$anonfun$jsonDecoderByteBufferImpl$2(CirceInstances.scala:62)
+2022.02.22 15:26:55 ERROR 	at cats.syntax.EitherOps$.leftMap$extension(either.scala:172)
+2022.02.22 15:26:55 ERROR 	at org.http4s.circe.CirceInstances.$anonfun$jsonDecoderByteBufferImpl$1(CirceInstances.scala:62)
+2022.02.22 15:26:55 ERROR 	at scala.util.Either.flatMap(Either.scala:352)
+2022.02.22 15:26:55 ERROR 	at cats.data.EitherT.$anonfun$subflatMap$1(EitherT.scala:415)
+2022.02.22 15:26:55 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:26:55 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:26:55 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:26:55 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:26:55 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:26:55 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:26:55 ERROR 	at clear @ org.http4s.client.middleware.Retry$.retryLoop$1(Retry.scala:84)
+2022.02.22 15:26:55 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:26:55 ERROR 	at rethrow$extension @ fs2.Compiler$Target.$anonfun$compile$1(Compiler.scala:156)
+2022.02.22 15:26:55 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:26:55 ERROR 	at flatMap @ fs2.Pull$.$anonfun$compile$21(Pull.scala:1185)
+2022.02.22 15:26:55 ERROR 	at update @ fs2.internal.Scope.releaseChildScope(Scope.scala:224)
+2022.02.22 15:26:55 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:26:55 ERROR 	at flatMap @ fs2.Compiler$Target.flatMap(Compiler.scala:162)
+2022.02.22 15:26:55 ERROR Caused by: io.circe.ParsingFailure: expected json value got '�   ...' (line 1, column 1)
+2022.02.22 15:26:55 ERROR searching for `used by: io/circe/ParsingFailure: expected json value got '�   //#` failed
+scala.meta.internal.mtags.IndexingExceptions$InvalidSymbolException: used by: io/circe/ParsingFailure: expected json value got '�   //#
+	at scala.meta.internal.mtags.OnDemandSymbolIndex.definitions(OnDemandSymbolIndex.scala:57)
+	at scala.meta.internal.metals.DestinationProvider.definition(DefinitionProvider.scala:313)
+	at scala.meta.internal.metals.DestinationProvider.fromSymbol(DefinitionProvider.scala:351)
+	at scala.meta.internal.metals.DestinationProvider.fromSymbol(DefinitionProvider.scala:371)
+	at scala.meta.internal.metals.DefinitionProvider.fromSymbol(DefinitionProvider.scala:104)
+	at scala.meta.internal.metals.StacktraceAnalyzer.findLocationForSymbol$1(StacktraceAnalyzer.scala:68)
+	at scala.meta.internal.metals.StacktraceAnalyzer.$anonfun$fileLocationFromLine$2(StacktraceAnalyzer.scala:73)
+	at scala.PartialFunction$Unlifted.applyOrElse(PartialFunction.scala:237)
+	at scala.collection.TraversableOnce.collectFirst(TraversableOnce.scala:180)
+	at scala.collection.TraversableOnce.collectFirst$(TraversableOnce.scala:167)
+	at scala.collection.AbstractTraversable.collectFirst(Traversable.scala:108)
+	at scala.meta.internal.metals.StacktraceAnalyzer.$anonfun$fileLocationFromLine$1(StacktraceAnalyzer.scala:73)
+	at scala.Option.flatMap(Option.scala:271)
+	at scala.meta.internal.metals.StacktraceAnalyzer.fileLocationFromLine(StacktraceAnalyzer.scala:71)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$handleServerMessage$1(DebugProxy.scala:183)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$handleServerMessage$1$adapted(DebugProxy.scala:160)
+	at scala.meta.internal.metals.debug.ServerAdapter.$anonfun$onReceived$1(ServerAdapter.scala:25)
+	at scala.meta.internal.metals.debug.MessageIdAdapter.$anonfun$listen$1(MessageIdAdapter.scala:57)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at scala.meta.internal.metals.debug.SocketEndpoint.listen(SocketEndpoint.scala:26)
+	at scala.meta.internal.metals.debug.MessageIdAdapter.listen(MessageIdAdapter.scala:47)
+	at scala.meta.internal.metals.debug.ServerAdapter.onReceived(ServerAdapter.scala:18)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$listenToServer$1(DebugProxy.scala:67)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2022.02.22 15:26:55 INFO  Closing debug server tcp://0.0.0.0:44663
+2022.02.22 15:26:55 INFO  Canceling debug proxy for [robot.RobotAlpha]
+2022.02.22 15:35:06 INFO  compiling root (1 scala source)
+2022.02.22 15:35:06 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:35:06 INFO  Deduplicating compilation of root from bsp client 'Metals 0.11.1' (since 42m 54.659s)
+2022.02.22 15:35:06 INFO  compiling root (1 scala source)
+2022.02.22 15:35:06 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:35:06 INFO  time: compiled root in 0.44s
+2022.02.22 15:35:06 INFO  compiling root (1 scala source)
+2022.02.22 15:35:06 INFO  Deduplicating compilation of root from bsp client 'Metals 0.11.1' (since 42m 55.119s)
+2022.02.22 15:35:06 INFO  compiling root (1 scala source)
+2022.02.22 15:35:06 INFO  time: compiled root in 0.45s
+fev. 22, 2022 3:35:07 DA TARDE org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Compilation not successful
+java.util.concurrent.CompletionException: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Compilation not successful
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:332)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:347)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:708)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2162)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:29)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:26)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at scala.concurrent.BatchingExecutor$Batch.processBatch$1(BatchingExecutor.scala:67)
+	at scala.concurrent.BatchingExecutor$Batch.$anonfun$run$1(BatchingExecutor.scala:82)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:85)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:59)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:875)
+	at scala.concurrent.BatchingExecutor.execute(BatchingExecutor.scala:110)
+	at scala.concurrent.BatchingExecutor.execute$(BatchingExecutor.scala:107)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:873)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:72)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1$adapted(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:288)
+	at scala.concurrent.Promise.complete(Promise.scala:53)
+	at scala.concurrent.Promise.complete$(Promise.scala:52)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:187)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Compilation not successful
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.$anonfun$applyOrElse$4(BuildServerConnection.scala:282)
+	at scala.Option.getOrElse(Option.scala:189)
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.applyOrElse(BuildServerConnection.scala:280)
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.applyOrElse(BuildServerConnection.scala:268)
+	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:417)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	... 4 more
+
+2022.02.22 15:35:06 INFO  compiling root (1 scala source)
+2022.02.22 15:35:08 INFO  time: compiled root in 0.73s
+fev. 22, 2022 3:35:08 DA TARDE org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Compilation not successful
+java.util.concurrent.CompletionException: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Compilation not successful
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:332)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:347)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:708)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2162)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:29)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:26)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at scala.concurrent.BatchingExecutor$Batch.processBatch$1(BatchingExecutor.scala:67)
+	at scala.concurrent.BatchingExecutor$Batch.$anonfun$run$1(BatchingExecutor.scala:82)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:85)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:59)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:875)
+	at scala.concurrent.BatchingExecutor.execute(BatchingExecutor.scala:110)
+	at scala.concurrent.BatchingExecutor.execute$(BatchingExecutor.scala:107)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:873)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:72)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1$adapted(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:288)
+	at scala.concurrent.Promise.complete(Promise.scala:53)
+	at scala.concurrent.Promise.complete$(Promise.scala:52)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:187)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Compilation not successful
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.$anonfun$applyOrElse$4(BuildServerConnection.scala:282)
+	at scala.Option.getOrElse(Option.scala:189)
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.applyOrElse(BuildServerConnection.scala:280)
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.applyOrElse(BuildServerConnection.scala:268)
+	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:417)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	... 4 more
+
+fev. 22, 2022 3:35:13 DA TARDE org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$: Cannot run class, since the workspace has errors.
+java.util.concurrent.CompletionException: scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$: Cannot run class, since the workspace has errors.
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:332)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptNow(CompletableFuture.java:747)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:735)
+	at java.base/java.util.concurrent.CompletableFuture.thenAcceptAsync(CompletableFuture.java:2186)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.thenAccept(FutureConvertersImpl.scala:37)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:279)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$: Cannot run class, since the workspace has errors.
+	at scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$.<clinit>(DebugProvider.scala)
+	at scala.meta.internal.metals.debug.DebugProvider.debugDiscovery(DebugProvider.scala:363)
+	at scala.meta.internal.metals.MetalsLanguageServer.executeCommand(MetalsLanguageServer.scala:1777)
+	at jdk.internal.reflect.GeneratedMethodAccessor12.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	... 9 more
+
+2022.02.22 15:35:19 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:35:20 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:35:21 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:35:21 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:35:22 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:35:23 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:35:24 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:35:30 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:35:30 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:35:31 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:35:32 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:35:32 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:35:34 INFO  compiling root (1 scala source)
+fev. 22, 2022 3:35:35 DA TARDE org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$: Cannot run class, since the workspace has errors.
+java.util.concurrent.CompletionException: scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$: Cannot run class, since the workspace has errors.
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:332)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptNow(CompletableFuture.java:747)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:735)
+	at java.base/java.util.concurrent.CompletableFuture.thenAcceptAsync(CompletableFuture.java:2186)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.thenAccept(FutureConvertersImpl.scala:37)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:279)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$: Cannot run class, since the workspace has errors.
+	at scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$.<clinit>(DebugProvider.scala)
+	at scala.meta.internal.metals.debug.DebugProvider.debugDiscovery(DebugProvider.scala:363)
+	at scala.meta.internal.metals.MetalsLanguageServer.executeCommand(MetalsLanguageServer.scala:1777)
+	at jdk.internal.reflect.GeneratedMethodAccessor12.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	... 9 more
+
+2022.02.22 15:35:34 INFO  time: compiled root in 0.46s
+2022.02.22 15:35:41 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:35:41 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:35:42 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:35:44 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:35:50 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:35:52 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:35:53 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:35:55 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:35:55 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:35:56 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:35:57 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:36:04 INFO  compiling root (1 scala source)
+fev. 22, 2022 3:36:04 DA TARDE org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$: Cannot run class, since the workspace has errors.
+java.util.concurrent.CompletionException: scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$: Cannot run class, since the workspace has errors.
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:332)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptNow(CompletableFuture.java:747)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:735)
+	at java.base/java.util.concurrent.CompletableFuture.thenAcceptAsync(CompletableFuture.java:2186)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.thenAccept(FutureConvertersImpl.scala:37)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:279)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$: Cannot run class, since the workspace has errors.
+	at scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$.<clinit>(DebugProvider.scala)
+	at scala.meta.internal.metals.debug.DebugProvider.debugDiscovery(DebugProvider.scala:363)
+	at scala.meta.internal.metals.MetalsLanguageServer.executeCommand(MetalsLanguageServer.scala:1777)
+	at jdk.internal.reflect.GeneratedMethodAccessor12.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	... 9 more
+
+2022.02.22 15:36:04 INFO  time: compiled root in 0.48s
+fev. 22, 2022 3:36:08 DA TARDE org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$: Cannot run class, since the workspace has errors.
+java.util.concurrent.CompletionException: scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$: Cannot run class, since the workspace has errors.
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:332)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptNow(CompletableFuture.java:747)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:735)
+	at java.base/java.util.concurrent.CompletableFuture.thenAcceptAsync(CompletableFuture.java:2186)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.thenAccept(FutureConvertersImpl.scala:37)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:279)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$: Cannot run class, since the workspace has errors.
+	at scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$.<clinit>(DebugProvider.scala)
+	at scala.meta.internal.metals.debug.DebugProvider.debugDiscovery(DebugProvider.scala:363)
+	at scala.meta.internal.metals.MetalsLanguageServer.executeCommand(MetalsLanguageServer.scala:1777)
+	at jdk.internal.reflect.GeneratedMethodAccessor12.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	... 9 more
+
+2022.02.22 15:36:11 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:36:11 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:36:28 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:36:30 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:36:32 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:36:35 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:36:36 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:36:37 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:36:39 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:36:41 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:36:43 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:36:54 WARN  Could not load snapshot text for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala
+2022.02.22 15:36:56 INFO  compiling root (1 scala source)
+fev. 22, 2022 3:36:56 DA TARDE org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$: Cannot run class, since the workspace has errors.
+java.util.concurrent.CompletionException: scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$: Cannot run class, since the workspace has errors.
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:332)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptNow(CompletableFuture.java:747)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:735)
+	at java.base/java.util.concurrent.CompletableFuture.thenAcceptAsync(CompletableFuture.java:2186)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.thenAccept(FutureConvertersImpl.scala:37)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:279)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$: Cannot run class, since the workspace has errors.
+	at scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$.<clinit>(DebugProvider.scala)
+	at scala.meta.internal.metals.debug.DebugProvider.debugDiscovery(DebugProvider.scala:363)
+	at scala.meta.internal.metals.MetalsLanguageServer.executeCommand(MetalsLanguageServer.scala:1777)
+	at jdk.internal.reflect.GeneratedMethodAccessor12.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	... 9 more
+
+2022.02.22 15:36:56 WARN  1 deprecation (since 0.22.0)
+2022.02.22 15:36:56 WARN  1 deprecation (since 0.23.5)
+2022.02.22 15:36:56 WARN  2 deprecations in total; re-run with -deprecation for details
+2022.02.22 15:36:57 INFO  time: compiled root in 1.01s
+2022.02.22 15:37:00 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/ricardo/IdeaProjects/ScalaWithRicardo/.metals/dap-server.trace.json or /home/ricardo/.cache/metals/dap-server.trace.json
+2022.02.22 15:37:00 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/ricardo/IdeaProjects/ScalaWithRicardo/.metals/dap-client.trace.json or /home/ricardo/.cache/metals/dap-client.trace.json
+2022.02.22 15:37:00 INFO  Starting debug proxy for [robot.RobotAlpha]
+2022.02.22 15:37:00 INFO  Trying to attach to remote debuggee VM localhost:40949 .
+2022.02.22 15:37:00 INFO  Attaching to debuggee VM succeeded.
+2022.02.22 15:37:00 ERROR SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2022.02.22 15:37:00 ERROR SLF4J: Defaulting to no-operation (NOP) logger implementation
+2022.02.22 15:37:00 ERROR SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2022.02.22 15:37:01 ERROR searching for `#` failed
+scala.meta.internal.mtags.IndexingExceptions$InvalidSymbolException: #
+	at scala.meta.internal.mtags.OnDemandSymbolIndex.definitions(OnDemandSymbolIndex.scala:57)
+	at scala.meta.internal.metals.DestinationProvider.definition(DefinitionProvider.scala:313)
+	at scala.meta.internal.metals.DestinationProvider.fromSymbol(DefinitionProvider.scala:351)
+	at scala.meta.internal.metals.DestinationProvider.fromSymbol(DefinitionProvider.scala:371)
+	at scala.meta.internal.metals.DefinitionProvider.fromSymbol(DefinitionProvider.scala:104)
+	at scala.meta.internal.metals.StacktraceAnalyzer.findLocationForSymbol$1(StacktraceAnalyzer.scala:68)
+	at scala.meta.internal.metals.StacktraceAnalyzer.$anonfun$fileLocationFromLine$2(StacktraceAnalyzer.scala:73)
+	at scala.PartialFunction$Unlifted.applyOrElse(PartialFunction.scala:237)
+	at scala.collection.TraversableOnce.collectFirst(TraversableOnce.scala:180)
+	at scala.collection.TraversableOnce.collectFirst$(TraversableOnce.scala:167)
+	at scala.collection.AbstractTraversable.collectFirst(Traversable.scala:108)
+	at scala.meta.internal.metals.StacktraceAnalyzer.$anonfun$fileLocationFromLine$1(StacktraceAnalyzer.scala:73)
+	at scala.Option.flatMap(Option.scala:271)
+	at scala.meta.internal.metals.StacktraceAnalyzer.fileLocationFromLine(StacktraceAnalyzer.scala:71)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$handleServerMessage$1(DebugProxy.scala:183)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$handleServerMessage$1$adapted(DebugProxy.scala:160)
+	at scala.meta.internal.metals.debug.ServerAdapter.$anonfun$onReceived$1(ServerAdapter.scala:25)
+	at scala.meta.internal.metals.debug.MessageIdAdapter.$anonfun$listen$1(MessageIdAdapter.scala:57)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at scala.meta.internal.metals.debug.SocketEndpoint.listen(SocketEndpoint.scala:26)
+	at scala.meta.internal.metals.debug.MessageIdAdapter.listen(MessageIdAdapter.scala:47)
+	at scala.meta.internal.metals.debug.ServerAdapter.onReceived(ServerAdapter.scala:18)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$listenToServer$1(DebugProxy.scala:67)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2022.02.22 15:37:04 INFO  Canceling debug proxy for [robot.RobotAlpha]
+2022.02.22 15:37:04 INFO  Closing debug server tcp://0.0.0.0:41691

@@ -200,7 +200,7 @@
         "platform": {
             "name": "jvm",
             "config": {
-                "home": "/usr/lib/jvm/java-17-openjdk-amd64",
+                "home": "/home/ricardo/.jdks/openjdk-17.0.1",
                 "options": [
                     "-Duser.dir=/home/ricardo/IdeaProjects/ScalaWithRicardo/project"
                 ]
