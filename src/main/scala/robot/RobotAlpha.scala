@@ -12,14 +12,8 @@ import org.typelevel.ci._
 import org.http4s.client.middleware.GZip
 
 object RobotAlpha extends IOApp {
-  override def run(args: List[String]): IO[ExitCode] = BlazeClientBuilder[IO](global).resource.map(GZip.apply[IO]()).use { client =>
-  
-    client.expect[Json](Request[IO](method = Method.GET, uri = factorsMapping).withHeaders(Headers.of(
-    Header.Raw(ci"Accept" , "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"),
-    Header.Raw(ci"Content-type","application/json; charset=utf-8"),
-    Header.Raw(ci"Accept-Encoding","gzip")
-    )))
-  
+  override def run(args: List[String]): IO[ExitCode] = BlazeClientBuilder[IO].resource.map(GZip.apply[IO]()).use { client =>
+    client.expect[Json](Request[IO](method = Method.GET, uri = factorsMapping))
   }.flatMap(IO.println).map(_ => ExitCode.Success)
 
   
@@ -27,8 +21,4 @@ object RobotAlpha extends IOApp {
   val uri2: Uri = uri"https://line510.bkfon-resources.com/events/list?lang=en&scopeMarket=1600&version=0"
 
 
-
-
-
-  
 }
