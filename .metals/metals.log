@@ -2556,3 +2556,29 @@ scala.meta.internal.mtags.IndexingExceptions$InvalidSymbolException: #
 
 2022.02.22 15:37:04 INFO  Canceling debug proxy for [robot.RobotAlpha]
 2022.02.22 15:37:04 INFO  Closing debug server tcp://0.0.0.0:41691
+2022.02.24 17:58:09 INFO  shutting down Metals
+2022.02.24 17:58:09 INFO  Shut down connection with build server.
+2022.02.24 17:58:09 INFO  Shut down connection with build server.
+2022.03.01 14:04:51 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/ricardo/IdeaProjects/ScalaWithRicardo/.metals/lsp.trace.json or /home/ricardo/.cache/metals/lsp.trace.json
+2022.03.01 14:04:51 INFO  logging to file /home/ricardo/IdeaProjects/ScalaWithRicardo/.metals/metals.log
+2022.03.01 14:04:51 INFO  Started: Metals version 0.11.1 in workspace '/home/ricardo/IdeaProjects/ScalaWithRicardo' for client Visual Studio Code 1.64.0.
+2022.03.01 14:04:51 INFO  Parse release: 17.0.1
+2022.03.01 14:04:51 WARN  Can't instantiate JavaInteractiveSemanticdb (version: Some(JdkVersion(17,0)), jdkHome: /usr/lib/jvm/java-17-openjdk-amd64, javac exists: false)
+2022.03.01 14:04:53 INFO  time: initialize in 1.67s
+2022.03.01 14:04:53 INFO  Attempting to connect to the build server...
+2022.03.01 14:04:53 INFO  skipping build import with status 'Installed'
+2022.03.01 14:04:54 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/ricardo/IdeaProjects/ScalaWithRicardo/.metals/bsp.trace.json or /home/ricardo/.cache/metals/bsp.trace.json
+2022.03.01 14:04:54 INFO  Attempting to connect to the build server...
+2022.03.01 14:04:54 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/ricardo/IdeaProjects/ScalaWithRicardo/project/.metals/bsp.trace.json or /home/ricardo/.cache/metals/bsp.trace.json
+2022.03.01 14:04:54 INFO  time: Connected to build server in 0.67s
+2022.03.01 14:04:54 INFO  Connected to Build server: Bloop v1.4.12
+2022.03.01 14:05:00 INFO  no build target found for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala. Using presentation compiler with project's scala-library version: 3.1.0
+2022.03.01 14:05:00 INFO  time: code lens generation in 6.37s
+2022.03.01 14:05:02 INFO  no build target found for /home/ricardo/IdeaProjects/ScalaWithRicardo/src/main/scala/robot/RobotAlpha.scala. Using presentation compiler with project's scala-library version: 3.1.0
+2022.03.01 14:05:03 INFO  time: code lens generation in 9.42s
+2022.03.01 14:05:05 WARN  Could not find java sources in None. Java symbols will not be available.
+2022.03.01 14:05:05 INFO  time: indexed workspace in 5.17s
+2022.03.01 14:05:06 INFO  compiling root (1 scala source)
+2022.03.01 14:05:07 INFO  time: compiled root in 1.61s
+2022.03.01 14:38:24 INFO  compiling scalawithricardo-build (1 scala source)
+2022.03.01 14:38:25 INFO  time: compiled scalawithricardo-build in 1.03s
