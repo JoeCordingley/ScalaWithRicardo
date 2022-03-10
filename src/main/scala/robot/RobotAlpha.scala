@@ -13,22 +13,31 @@ import io.circe.generic.semiauto._
 import java.time.LocalDateTime
 
 object RobotAlpha extends IOApp {
+  val factorsMappingUri: Uri =uri"https://line32.bkfon-resources.com/line/factorsCatalog/tables/?lang=en&version=0"   //<- one where we'll build the market map from
+  val eventsInfoUri: Uri = uri"https://line510.bkfon-resources.com/events/list?lang=en&scopeMarket=1600&version=0"   //with all the events, odds and etc
+
   override def run(args: List[String]): IO[ExitCode] = BlazeClientBuilder[IO].resource.map(GZip.apply[IO]()).use { client =>
-    client.expect[Json](Request[IO](method = Method.GET, uri = uri2))
+    //client.expect[EventsInfo](Request[IO](method = Method.GET, uri = eventsInfoUri))
+    for{
+      factorsMapping <- client.expect[FactorsCatalog](Request[IO](method = Method.GET, uri = factorsMappingUri))
+      eventsInfo <-  client.expect[EventsInfo](Request[IO](method = Method.GET, uri = eventsInfoUri))
+    } yield {
+    //  val eventsMap = getEventsMap(eventsInfo)
+    //  val marketsMap = getMarketsMap(factorsMapping)
+    //  resolveFactors(eventsInfo.customFactors, eventsMap, marketsMap)
+      ()
+    }
   }.flatMap(IO.println).map(_ => ExitCode.Success)
 
-  val factorsMapping: Uri =uri"https://line32.bkfon-resources.com/line/factorsCatalog/tables/?lang=en&version=0"   //<- one where we'll build the market map from
-
-  val uri2: Uri = uri"https://line510.bkfon-resources.com/events/list?lang=en&scopeMarket=1600&version=0"   //with all the events, odds and etc
-
-  //"1x2-> (factor#ofHome)(option#ofDraw)(factor#ofaway)"
-  //"moneyline 3way-> (factorofHome))(factorofaway)"
 
   //{.league, .home, .away, .gameInfo (KO time), .ot(offer type = market name), .lineID, .oh, .oa, .od};
 
 
-  //arrays within the response from [URI2]
-  //sport -> gives us sport/league id
+
+  case class EventsInfo(customFactors: List[CustomFactor], events: List[Event])
+  object EventsInfo {
+    implicit val eventsInfoDecoder: Decoder[EventsInfo] = deriveDecoder
+  }
 
   case class FactorsCatalog(groups: List[Group])
   object FactorsCatalog {
@@ -46,38 +55,60 @@ object RobotAlpha extends IOApp {
   }
 
   case class Factor(f: Int, v: BigDecimal, pt: Option[String])
+  object Factor {
+    implicit val factorDecoder: Decoder[Factor] = deriveDecoder
+  }
 
   case class CustomFactor(e: Int, factors: List[Factor])
+  object CustomFactor {
+    implicit val customFactorDecoder: Decoder[CustomFactor] = deriveDecoder
+  }
 
-  //in the array [sports], get every element that has a field "parentId", and it's equal to "1"
+  case class Event(id: Int, sportId: Int, team1: Option[String] , team2: Option[String] , startTime: Long)
+  object Event {
+    implicit val eventDecoder: Decoder[Event] = deriveDecoder
+  }
 
+  case class Sport(id: Int, name: String)
   case class EventData(league: String, home: String, away: String, gameInfo: LocalDateTime)
   case class EventId(id: Int)
+  case class FactorId(id: Int)
   case class OddsRow(league : String, home: String, away: String, gameInfo: LocalDateTime, ot: String, oh: BigDecimal, oa: BigDecimal, od: Option[BigDecimal])
 
   type EventMap = Map[EventId, EventData]
-  type MarketsMap = Map[FactorId, String]
-  def resolveFactors(factors : List[CustomFactor], eventMap: EventMap) : List[OddsRow] = for {
+  type MarketsMap = Map[OddsKey, FactorId]
+
+  def resolveFactors(factors : List[CustomFactor], eventMap: EventMap, marketsMap : MarketsMap) : List[OddsRow] = for {
     factor <- factors
-    oddsRow <- getOddsRow(factor, eventMap).toList
+    oddsRow <- getOddsRows(factor, eventMap, marketsMap)
   } yield oddsRow
 
-  def getOddsRow(factor: CustomFactor, eventMap: EventMap, marketsMap : ): Option[OddsRow] = (
+  def getMoneyline(factor: CustomFactor, eventMap: EventMap, marketsMap : MarketsMap): Option[OddsRow] = (
     getLeague(EventId(factor.e), eventMap),
     getHome(EventId(factor.e), eventMap),
     getAway(EventId(factor.e), eventMap),
     getGameInfo(EventId(factor.e), eventMap),
-    getOt(factor.factors, marketsMap),
-    getOh,
-    getOa,
-    Some(getDraw)
+    Some("1x2"),
+    getOh(factor.factors, marketsMap),
+    getOa(factor.factors, marketsMap),
+    Some(getDraw(factor.factors, marketsMap))
     ).mapN(OddsRow.apply)
 
+  def getOddsRows(factor: CustomFactor, eventMap: EventMap, marketsMap: MarketsMap) : List[OddsRow] = getMoneyline(factor, eventMap, marketsMap).toList
+
   //{921, 922, 923}  -> 1x2
-  //we can assume as true = draw is either an odds value (3way) or a points value (2way)
-  //home /away
-  //home == odd == over
-  //away == even == under
+  //("1x2" -> {921, 922, 923})
+  //("Yes/no" -> {921, 922})
+  /*
+  HomeOdds, AwayOdds, DrawOdds              <-Moneyline 1x2
+  HomeOdds, AwayOdds, Points                <-Handicap
+  CorrectScoreHome, CorrectScoreAway, Odds  <-Correct Score
+  OverOdds, UnderOdds, Points
+  OddOdds, EvenOdds, Points
+  YesOdds, NoOdds, Points                   <-Props
+
+  [USPGAChampionship, 19357516, 2022-05-19 19:00, , HenrikStenson, Outright, 151.00, 0], <- this is golf, BUT it's a HorseRow
+   */
 
   def getLeague(eventId: EventId, eventMap: EventMap): Option[String] = eventMap.get(eventId).map(_.league)
 
@@ -85,13 +116,25 @@ object RobotAlpha extends IOApp {
   def getAway(eventId: EventId, eventMap: EventMap): Option[String] = eventMap.get(eventId).map(_.away)
   def getGameInfo(eventId: EventId, eventMap: EventMap): Option[LocalDateTime] = eventMap.get(eventId).map(_.gameInfo)
 
-  def getOt: Option[String] = ???
+//  def getOt: Option[String] =
+// Map[OddsKey, FactorId]
+  def getOddsFromKey(factors: List[Factor], map: MarketsMap, key: OddsKey): Option[BigDecimal] =
+    map.get(key).flatMap{
+      case FactorId(id) => factors.collectFirst{
+        case Factor(f, v, _) if f == id => v
+      }
+    }
 
-  def getOh: Option[BigDecimal] = ???
-  def getOa: Option[BigDecimal] = ???
-  def getDraw: Option[BigDecimal] = ???
+  def getOh(factors: List[Factor], map: MarketsMap): Option[BigDecimal] = getOddsFromKey(factors, map, Home)
 
+  def getOa(factors: List[Factor], map: MarketsMap): Option[BigDecimal] = getOddsFromKey(factors, map, Away)
 
+  def getDraw(factors: List[Factor], map: MarketsMap): Option[BigDecimal] = getOddsFromKey(factors, map, Draw)
+
+  sealed trait OddsKey
+  case object Home extends OddsKey
+  case object Away extends OddsKey
+  case object Draw extends OddsKey
 
   sealed trait Element
   object Element {
