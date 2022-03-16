@@ -29,45 +29,36 @@ object RobotAlpha extends IOApp {
     }
   }.flatMap(IO.println).map(_ => ExitCode.Success)
 
-
-  //{.league, .home, .away, .gameInfo (KO time), .ot(offer type = market name), .lineID, .oh, .oa, .od};
-
-
-
-  case class EventsInfo(customFactors: List[CustomFactor], events: List[Event])
+  case class EventsInfo(customFactors: List[CustomFactor], events: List[Event], sports: List[Sport])
   object EventsInfo {
     implicit val eventsInfoDecoder: Decoder[EventsInfo] = deriveDecoder
   }
 
-  case class FactorsCatalog(groups: List[Group])
-  object FactorsCatalog {
-    implicit val factorsCatalogDecoder: Decoder[FactorsCatalog] = deriveDecoder
-  }
+  type EventMap = Map[EventId, EventData]
+  type MarketsMap = Map[OddsKey, FactorId]
+  type SportMap = Map[SportId, String]
 
-  case class Group(name: String, tables: List[Table])
-  object Group{
-    implicit val groupDecoder: Decoder[Group] = deriveDecoder
-  }
+  case class SportId(value: Int)
 
-  case class Table(name: Option[String], rows: List[List[Element]])
-  object Table {
-    implicit val tableDecoder: Decoder[Table] = deriveDecoder
-  }
+  def getSportMap(sports: List[Sport]): SportMap = sports.map(sport => SportId(sport.id) -> sport.name).toMap
 
-  case class Factor(f: Int, v: BigDecimal, pt: Option[String])
-  object Factor {
-    implicit val factorDecoder: Decoder[Factor] = deriveDecoder
-  }
+  def getEventsMap(eventsInfo: EventsInfo, sportMap: SportMap): EventMap = {
+    for {
+      event <- eventsInfo.events
+      eventData <- getEventData(event, sportMap).toList
+    } yield (EventId(event.id), eventData)
+  }.toMap
 
-  case class CustomFactor(e: Int, factors: List[Factor])
-  object CustomFactor {
-    implicit val customFactorDecoder: Decoder[CustomFactor] = deriveDecoder
-  }
 
-  case class Event(id: Int, sportId: Int, team1: Option[String] , team2: Option[String] , startTime: Long)
-  object Event {
-    implicit val eventDecoder: Decoder[Event] = deriveDecoder
-  }
+  def getEventData(event: Event, sportMap: SportMap): Option[EventData] = (sportMap.get(SportId(event.sportId)),event.team1,event.team2, Some(hongKongLocal(event.startTime))).mapN(EventData)
+
+  def hongKongLocal(milliseconds: Long): LocalDateTime = Instant.ofEpochMilli(milliseconds).atZone(ZoneId.of("Asia/Hong_Kong")).toLocalDateTime
+
+
+
+
+
+  //{.league, .home, .away, .gameInfo (KO time), .ot(offer type = market name), .lineID, .oh, .oa, .od};
 
   case class Sport(id: Int, name: String)
   case class EventData(league: String, home: String, away: String, gameInfo: LocalDateTime)
@@ -145,6 +136,63 @@ object RobotAlpha extends IOApp {
     val factorDecoder : Decoder[Element] = deriveDecoder[Factor].widen
     implicit val elementDecoder: Decoder[Element] = labelDecoder or factorDecoder
 
+  }
+
+  sealed trait ResolvedTable
+  case class OneDTable(name: String, map: Map[String, Int]) extends ResolvedTable
+  case class TwoDTable(name: String, dimension: String, map: Map[(String, String), Int])
+
+  def resolveTable(table: Table): Option[ResolvedTable] = table.rows match{
+    case header :: rows => resolveHeader(header).flatMap(resolveRows(_, rows))
+    case Nil => None
+  }
+  def resolveHeader(row: List[Element]): Option[Header] = row.traverse{
+    case Element.Label(name) => Some(name)
+    case Element.Factor(_) => None
+  }.map(Header)
+
+  case class Header(labels: List[String])
+  def resolveRows(header: Header, rows: List[List[Element]]): Option[ResolvedTable] = resolveTwoDTable(header, rows) <+> resolveOneDTable(header, rows)
+
+  def resolveTwoDTable(header: Header, value: List[List[Element]]): Option[ResolvedTable] = header.labels match {
+    case zeroZeroElement :: labels => TwoDTable(???, zeroZeroElement, labels.traverse(label => ???))
+  }
+
+  def resolveOneDTable(header: Header, value: List[List[Element]]): Option[ResolvedTable] = ???
+
+
+  def getMarketsMap(factorsCatalog: FactorsCatalog): MarketsMap = factorsCatalog.
+
+  case class Event(id: Int, sportId: Int, team1: Option[String] , team2: Option[String] , startTime: Long)
+
+  case class FactorsCatalog(groups: List[Group])
+  object FactorsCatalog {
+    implicit val factorsCatalogDecoder: Decoder[FactorsCatalog] = deriveDecoder
+  }
+
+  case class Group(name: String, tables: List[Table])
+  object Group{
+    implicit val groupDecoder: Decoder[Group] = deriveDecoder
+  }
+
+  case class Table(name: Option[String], rows: List[List[Element]])
+  object Table {
+    implicit val tableDecoder: Decoder[Table] = deriveDecoder
+  }
+
+  case class Factor(f: Int, v: BigDecimal, pt: Option[String])
+  object Factor {
+    implicit val factorDecoder: Decoder[Factor] = deriveDecoder
+  }
+
+  case class CustomFactor(e: Int, factors: List[Factor])
+  object CustomFactor {
+    implicit val customFactorDecoder: Decoder[CustomFactor] = deriveDecoder
+  }
+
+
+  object Event {
+    implicit val eventDecoder: Decoder[Event] = deriveDecoder
   }
 }
 
