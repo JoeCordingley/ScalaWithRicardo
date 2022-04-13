@@ -22,10 +22,10 @@ object Robot extends IOApp {
       factorsMapping <- client.expect[FactorsCatalog](Request[IO](method = Method.GET, uri = factorsMappingUri))
       eventsInfo <-  client.expect[EventsInfo](Request[IO](method = Method.GET, uri = eventsInfoUri))
     } yield {
-    //  val eventsMap = getEventsMap(eventsInfo)
-    //  val marketsMap = getMarketsMap(factorsMapping)
-    //  resolveFactors(eventsInfo.customFactors, eventsMap, marketsMap)
-      ()
+      val sportMap = RobotMapping.getSportMap(eventsInfo.sports)
+      val eventsMap = RobotMapping.getEventsMap(eventsInfo, sportMap)
+      val marketsMap = RobotMapping.getMarketsMap(factorsMapping)
+      RobotMapping.resolveOddsRows(eventsInfo.customFactors, eventsMap, marketsMap) //TODO pretty print
     }
   }.flatMap(IO.println).map(_ => ExitCode.Success)
 

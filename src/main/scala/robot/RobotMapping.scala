@@ -71,9 +71,11 @@ object RobotMapping {
   type MarketsMap = Map[OddsKey, FactorId]
   def getMarketsMap(factorsCatalog: FactorsCatalog): MarketsMap = {
     for {
-      table <- resolveTables(factorsCatalog.groups.flatMap(_.tables)).iterator.find(table => table == Some("1x2"))
+      table <- resolveTables(factorsCatalog.groups.flatMap(_.tables)).iterator.collectFirst{ 
+        case NamedTable(Some("1x2"), resolvedTable) => resolvedTable
+      }
       values <- table match {
-        case OneDTable(_, map) => OddsKey.values.traverse(oddsKey => map.get(OddsKey.oddsKeyString(oddsKey)).map(id => oddsKey -> FactorId(id)))
+        case OneDTable(map) => OddsKey.values.traverse(oddsKey => map.get(OddsKey.oddsKeyString(oddsKey)).map(id => oddsKey -> FactorId(id)))
         case _ => None
       }
     } yield values.toMap
@@ -90,7 +92,7 @@ object RobotMapping {
 
   sealed trait ResolvedTable
   case class OneDTable(map: Map[String, Int]) extends ResolvedTable
-  case class TwoDTable(dimension: String, map: Map[(String, String), Int])
+  case class TwoDTable(dimension: String, map: Map[(String, String), Int]) extends ResolvedTable
 
   case class NamedTable(name: Option[String], resolvedTable: ResolvedTable)
 
@@ -111,14 +113,31 @@ object RobotMapping {
     case Nil => None
   }
   case class Header(labels: List[String])
-  def resolveRows(header: Header, rows: List[List[Element]]): Option[ResolvedTable] = resolveTwoDTable(header, rows) <+> resolveOneDTable(header, rows)
+  def resolveRows(header: Header, rows: List[List[Element]]): Option[ResolvedTable] = resolveOneDTable(header, rows) <+> resolveTwoDTable(header, rows)
 
-  def resolveTwoDTable(header: Header, value: List[List[Element]]): Option[ResolvedTable] = ??? //header.labels match {
- //   case zeroZeroElement :: labels => TwoDTable(???, zeroZeroElement, labels.traverse(label => ???))
- // }
+  def resolveTwoDTable(header: Header, value: List[List[Element]]): Option[ResolvedTable] = uncons(header.labels).map{ case (head, tail) =>
+    TwoDTable(head, {
+      for {
+        (Element.Label(name) :: values, index) <- value.zipWithIndex
+        (headerLabel, Element.Factor(factorId)) <- tail.zip(values)
+      } yield (name.replaceAll("%P", s"%${index + 1}"),headerLabel) -> factorId
+    }.toMap)
+  }
 
-  def resolveOneDTable(header: Header, value: List[List[Element]]): Option[ResolvedTable] = ???
+  def uncons[A]: List[A] => Option[(A, List[A])] = {
+    case Nil => None
+    case a :: as => Some((a, as))
+  }
 
-  def hongKongLocal(milliseconds: Long): LocalDateTime = Instant.ofEpochMilli(milliseconds).atZone(ZoneId.of("Asia/Hong_Kong")).toLocalDateTime
+  val x: Seq[(Char, Int)] = List('a', 'b').zipWithIndex
 
+  def resolveOneDTable(header: Header, value: List[List[Element]]): Option[ResolvedTable] = value match {
+    case List(values) => values.traverse{
+      case Element.Factor(id) => Some(id)
+      case _ => None
+    }.map(values => OneDTable(header.labels.zip(values).toMap)) //TODO check length of header matches length of values
+    case _ => None
+  }
+
+  def hongKongLocal(seconds: Long): LocalDateTime = Instant.ofEpochSecond(seconds).atZone(ZoneId.of("Asia/Hong_Kong")).toLocalDateTime
 }
